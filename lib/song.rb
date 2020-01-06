@@ -47,4 +47,6 @@ end
     sorted
   end
 
+def self.new_from_filename
+  
 end
