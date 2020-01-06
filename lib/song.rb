@@ -43,7 +43,7 @@ def self.find_or_create_by_name(name)
 end
 
 def self.alphabetical(name)
- sorted = self.all.sort_by {|x| x.name}
+ sorted = self.all.sort_by {|song| song.name}
  sorted
 end
 
