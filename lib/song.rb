@@ -43,6 +43,8 @@ def self.find_or_create_by_name(name)
 end
 
 def self.alphabetical(name)
-  
-  
+ sorted = self.all.sort
+ sorted
+end
+
 end
