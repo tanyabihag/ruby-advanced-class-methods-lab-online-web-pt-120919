@@ -47,6 +47,25 @@ end
     sorted
   end
 
-def self.new_from_filename
-  
-end
+  def self.new_from_filename(string)
+    new_array = string.split("- ")
+    song_name = "#{new_array[1]}".gsub(".mp3",'')
+    song = self.new 
+    song.name = "#{song_name}"
+    song.artist_name = "#{new_array[0]}".gsub(" ",'')
+    song
+  end
+
+  def self.create_from_filename(string)
+    new_array = string.split("- ")
+    song_name = "#{new_array[1]}".gsub(".mp3",'')
+    song = self.new 
+    song.name = "#{song_name}"
+    song.artist_name = "#{new_array[0]}".gsub(" ",'')
+    @@all << song
+    song
+  end
+
+  def self.destroy_all
+    @@all.clear
+  end
